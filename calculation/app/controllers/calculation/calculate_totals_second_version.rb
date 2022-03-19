@@ -14,7 +14,7 @@ module Calculation
 
       ActiveRecord::Base.transaction do
         main_app_user_helper.update_user(total_orders_eur: return_value[:result])
-        Calculation::User.create(main_app_user.attributes.slice(:id))
+        Calculation::User.create!(main_app_user.attributes.slice(:id))
       end
 
       render json: main_app_user, status: :ok

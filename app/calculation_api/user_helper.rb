@@ -8,7 +8,7 @@ module CalculationApi
     end
 
     def update_user(attributes)
-      user.update(attributes)
+      user.update!(attributes)
     end
   end
 end
